@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    /* [문제]
+        정수 a와 b가 주어집니다. 각 수를 입력받아 입출력 예와 같은 형식으로 출력하는 코드를 작성해 보세요.
+        https://school.programmers.co.kr/learn/courses/30/lessons/181951
+    */
+
+    const readline = require('readline'); 
+        // readline 모듈 불러온다. 
+        /* 
+            [readline 모듈 기능] 
+            - 콘솔을 출력할 줄 만 알았지, 콘솔 입력을 할 줄은 몰랐다. 그 동안. (https://bluehorn07.tistory.com/49) 
+            - 콘솔을 입력 한다는건, 무슨 말 이지? 
+                - 뭘 하고자 하는건데? 그냥, console 을 뽑으면 안 되는 건가? 
+                - 굳이 코딩테스트에서 이게 있는 이유가 뭐지? 
+                - createInterface 이 인터페이스를 구성한다는 건 뭐지? 
+                - 
+            
+        */
+
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    let input = [];
+
+    rl.on('line', function (line) {
+        input = line.split(' ');
+    }).on('close', function () {
+        console.log(`a = ${input[0]}`)
+        console.log(`b = ${input[1]}`)
+    });
+
+    /* [고민]
+        - 대체 이 출제 의도가 뭘까. 
+        
+    */
+
+</script>
+
+</html>
