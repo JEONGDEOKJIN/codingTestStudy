@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    /* [문제]
+        문자열 str과 정수 n이 주어집니다.
+        str이 n번 반복된 문자열을 만들어 출력하는 코드를 작성해 보세요.        
+        https://school.programmers.co.kr/learn/courses/30/lessons/181950    
+*/
+
+    const readline = require('readline');
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    let input = [];
+
+    rl.on('line', function (line) {
+        input = line.split(' ');
+    }).on('close', function () {
+        str = input[0];
+        n = Number(input[1]);
+        const arr = []
+        for (i = 0; i < n; i++) {
+            arr.push(str)
+        }
+        console.log(arr.join(''))
+    });
+
+    /* [고민]
+        - 살짝 '반복' 된다는데 있어서, 고민이 되었다. 뭘까. 
+        - 곱하기를 생각했었다. 
+        - '반복'을 repeat 로 처리한 답도 있었다. 
+        - 나는 '반복' 을 for 문으로 처리 하는 것 밖에 생각이 안 났다. 
+        - 이때, 1) 배열에 넣고, 2) 배열 요소를 문자열로 만드는 방법밖에 없었다.  
+        - 다음번에 '반복' 의 매커니즘이 나올 때는 나도, repeat 를 떠올려서, 사용할 수 있게 해야 겠다. 
+        - 그런데, repeat 이라는 메서드를 알고 있는 것, 뿐 아니라, 그 밑단에서, '배열' 에 넣고, '자료형을 변경' 하는 로직도 알고 있다는것도 중요하다고 생각한다. 
+        - 정도는 없고. 하나씩. 
+    */
+
+</script>
+
+</html>
