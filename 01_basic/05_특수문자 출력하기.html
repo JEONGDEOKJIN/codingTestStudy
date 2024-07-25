@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    /* [문제]
+    !@#$%^&*(\'"<>?:; 이와 같이 출력하도록 작성하세요.
+    https://school.programmers.co.kr/learn/courses/30/lessons/181948
+    */
+
+    const readline = require('readline');
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    rl.on('close', function () {
+        console.log("!@#$%^&*(\\'\"<>?:;")
+    });
+
+    /* [고민 및 알게 된 점] escape 처리가 필요한 이유와 그 방법
+        - 특수 문자를 출력 하는 문제 
+        - 이게 문제가 되는 이유는 뭘까. 나 처럼, 처음에, 해당 문자를 넣으면 된다고 생각하는 사람들이 있을 것 이다. 
+        
+        예를 들어서 
+        He said, \"Hello World\"
+        정확히 이걸 출력하고 싶을 수 있다. 
+
+        그런데, 문제는, 컴퓨터는 " 이 쌍따옴표와 \ 이 백슬래시에 '특별한 의미' 를 부여하고 있다는 것 이다. 
+
+        그래서, " 와 \ 는, 단순히 출력하고 싶어서, 사용해도, 컴퓨터 입장에서는 '특별한 기능' 을 수행하려고 한다는 점, 이다. 
+
+        그래서, 컴퓨터에게 "이건, 네가 알고 있는 특수한 기능이 아니야. 거기에서 빠져나와서(escape) 그냥, 그 글자를 출력해" 라고 말해줘야 한다. 
+
+        이걸 escape 처리 한다고 한다. 
+
+        escape 처리 방법은 \ 이 역슬래시를 쓰면 된다. 
+
+        그러면, 아래와 같이 쓰면 된다. 
+        
+        console.log("He said, \"Hello World\"");
+
+    */
+
+</script>
+
+</html>
